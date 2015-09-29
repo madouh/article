@@ -17,4 +17,4 @@ rm -rf /var/lib/apt/lists/*
 
 ONBUILD RUN bundle exec rake db:migrate
 EXPOSE 80
-CMD ["rails", "server"]
+CMD ["rails", "server -p 80"]
