@@ -12,9 +12,8 @@ ONBUILD RUN bundle install
 ONBUILD COPY . /usr/src/app
 
 RUN apt-get update && \
-apt-get install -y nodejs –no-install-recommends && \
-rm -rf /var/lib/apt/lists/*
+apt-get install -y nodejs 
 
 ONBUILD RUN bundle exec rake db:migrate
 EXPOSE 80
-CMD ["rails", "server -p 80"]
+CMD ["bundle", "exec", "rails", "s", "-p", "80"]
