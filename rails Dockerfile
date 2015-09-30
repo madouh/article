@@ -1,0 +1,4 @@
+FROM seapy/rails-nginx-unicorn
+MAINTAINER seapy(iamseapy@gmail.com)
+RUN bundle exec rake db:migrate
+EXPOSE 80
